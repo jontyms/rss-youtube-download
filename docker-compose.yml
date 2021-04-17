@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+    testyoupy:
+        image: unstablenectarine/youtubepy 
+        volumes: 
+         - ~/youtube/rsss.txt:/code/rsss.txt:ro

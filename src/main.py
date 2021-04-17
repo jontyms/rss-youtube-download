@@ -15,4 +15,4 @@ for i in range(len(rssFeeds)):
  for x in range(len(NewsFeed)):
   entry = NewsFeed.entries[x]
   logging.info(entry.link)
-os.system("youtube-dl -i --dateafter now-1week -a vidoes.txt --download-archive ~/.mydownloads --add-metadata --write-all-thumbnails --embed-thumbnail --write-info-json --embed-subs --all-subs -o '~/youtube/%(uploader)s/%(title)s.%(ext)s' --cookies cookies.txt -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]'")
+os.system("youtube-dl -i --dateafter now-1week -a vidoes.txt --download-archive ~/.mydownloads --add-metadata --write-all-thumbnails --embed-thumbnail --write-info-json --embed-subs --all-subs -o '~/youtube/%(uploader)s/%(title)s.%(ext)s' -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]'")
