@@ -11,6 +11,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 # install dependencies
 RUN apt-get -y update
 RUN apt-get -y upgrade
+RUN apt-get -y install ffmpeg
 RUN pip install -r requirements.txt
 
 
