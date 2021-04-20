@@ -4,7 +4,7 @@ import os
 import time
 
 logging.basicConfig(filename='vidoes.txt', level=logging.DEBUG, format='')
-myfile = open("rsss.txt", "r")
+myfile = open("~/youtube/rsss.txt", "r")
 rssFeeds = []
 myline = myfile.readline()
 while myline:
