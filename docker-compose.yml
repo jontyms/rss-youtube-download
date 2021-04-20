@@ -2,6 +2,6 @@ version: "3"
 
 services:
     testyoupy:
-        image: unstablenectarine/youtubepy 
+        image: unstablenectarine/youtubepy:dev
         volumes: 
          - ~/youtube/:/root/youtube
