@@ -15,7 +15,7 @@ print(rssFeeds)
 for i in range(len(rssFeeds)):
  NewsFeed = feedparser.parse(rssFeeds[i])
  print(rssFeeds[i])
- while x in range(len(NewsFeed)):
+ for x in range(len(NewsFeed)):
   entry = NewsFeed.entries[x]
   logging.info(entry.link)
 os.system("youtube-dl -i --dateafter now-1week -a vidoes.txt --download-archive ~/youtube/archive --add-metadata --embed-thumbnail --embed-subs --all-subs -o '~/youtube/%(uploader)s/%(title)s.%(ext)s' -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]'")
