@@ -2,6 +2,7 @@ import feedparser
 import logging
 import os
 import time
+from pathlib import Path
 
 logging.basicConfig(filename='vidoes.txt', level=logging.DEBUG, format='')
 myfile = open("/root/youtube/rsss.txt", "r")
@@ -19,4 +20,6 @@ for i in range(len(rssFeeds)):
   entry = NewsFeed.entries[x]
   logging.info(entry.link)
 os.system("youtube-dl -i --dateafter now-1week -a vidoes.txt --download-archive ~/youtube/archive --add-metadata --embed-thumbnail --embed-subs --all-subs -o '~/youtube/%(uploader)s/%(title)s.%(ext)s' -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]'")
+os.remove("vidoes.txt") 
+Path('vidoes.txt').touch()
 time.sleep(3*60*60)
