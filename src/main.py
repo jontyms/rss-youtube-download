@@ -19,4 +19,4 @@ for i in range(len(rssFeeds)):
   entry = NewsFeed.entries[x]
   logging.info(entry.link)
 os.system("youtube-dl -i --dateafter now-1week -a vidoes.txt --download-archive ~/youtube/archive --add-metadata --embed-thumbnail --embed-subs --all-subs -o '~/youtube/%(uploader)s/%(title)s.%(ext)s' -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]'")
-time.sleep(3*60)
+time.sleep(3*60*60)
