@@ -3,6 +3,8 @@ import logging
 import os
 import time
 from pathlib import Path
+import pwd
+import grp
 
 logging.basicConfig(filename='vidoes.txt', level=logging.DEBUG, format='')
 myfile = open("/root/youtube/rsss.txt", "r")
@@ -23,4 +25,6 @@ os.system("youtube-dl -i --dateafter now-1week -a vidoes.txt --download-archive 
 print('done downloading videos')
 os.remove("vidoes.txt") 
 Path('vidoes.txt').touch()
+uid = pwd.getpwnam("ubuntu").pw_uid
+os.chown(~/youtube , uid)
 time.sleep(3*60*60)
