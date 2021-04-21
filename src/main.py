@@ -25,6 +25,5 @@ os.system("youtube-dl -i --dateafter now-1week -a vidoes.txt --download-archive 
 print('done downloading videos')
 os.remove("vidoes.txt") 
 Path('vidoes.txt').touch()
-uid = pwd.getpwnam("ubuntu").pw_uid
-os.chown(~/youtube , uid)
+
 time.sleep(3*60*60)
