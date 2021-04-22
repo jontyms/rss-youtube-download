@@ -21,7 +21,7 @@ for i in range(len(rssFeeds)):
  for x in range(len(NewsFeed)):
   entry = NewsFeed.entries[x]
   logging.info(entry.link)
-os.system("youtube-dl -i --dateafter now-1week -a vidoes.txt --download-archive ~/youtube/archive --add-metadata --embed-thumbnail --embed-subs --all-subs -o '~/youtube/%(uploader)s/%(title)s.%(ext)s' -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]'")
+os.system("youtube-dl -i --dateafter now-6week -a vidoes.txt --download-archive ~/youtube/archive --add-metadata --embed-thumbnail --embed-subs --all-subs -o '~/youtube/%(uploader)s/%(title)s.%(ext)s' -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]'")
 print('done downloading videos')
 os.remove("vidoes.txt") 
 Path('vidoes.txt').touch()
